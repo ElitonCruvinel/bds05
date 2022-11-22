@@ -22,4 +22,10 @@ public class UserResources {
 		UserDTO dto = service.findById(id);
 		return ResponseEntity.ok().body(dto);
 	}
+
+	@GetMapping(value = "/profile")
+	public ResponseEntity<UserDTO> getUserProfile() {
+		UserDTO dto = service.getUserProfile();
+		return ResponseEntity.ok().body(dto);
+	}
 }
